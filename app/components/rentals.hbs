@@ -1,0 +1,26 @@
+<div class="rentals">
+    <label>
+        <span>Where would you like to stay?</span>
+        <!--whenever the user types something into the input box, this.query changes accordingly.-->
+        <Input @value={{this.query}} class="light"/>
+    </label>
+
+    <ul class="results">
+        <!-- {{#each @rentals as |property|}}
+            <li><Rental @rental={{property}} /></li>
+        {{/each}} -->
+
+
+
+        <!--In this case, our <Rentals::Filter> component wants to take the unfiltered list of rental properties and match them against the user's query.
+        Once the component has matched the rentals against the query,
+        it will need to provide a filtered list of rental properties to its caller (the <Rentals> component).-->
+        <Rentals::Filter @rentals={{@rentals}} @query={{this.query}} as |results|>
+            {{#each results as |property|}}
+                <li>
+                    <Rental @rental={{property}} />
+                </li>
+            {{/each}}
+        </Rentals::Filter>
+    </ul>
+</div>

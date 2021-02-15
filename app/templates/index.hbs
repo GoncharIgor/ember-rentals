@@ -1,0 +1,28 @@
+<Jumbo>
+    <h2>Welcome to Super Rentals!</h2>
+    <p>We hope you find exactly what you're looking for in a place to stay.</p>
+    <LinkTo @route="about" class="button">About Us</LinkTo>
+    <!--LinkTo - a component. Starts with an uppercase letter-->
+    <!--The @route=... part is how we pass arguments into the component-->
+    <!--should be the name of the route, not the path, which is why we specified "about" instead of "/about"-->
+    <!--components can also take the usual HTML attributes, without @ symbol-->
+</Jumbo>
+
+<!--data from route model() hook-->
+<!--<h1>{{@model.title}}</h1>-->
+
+
+<Rentals @rentals={{@model}} />
+
+<!--If model from route is a single Object: -->
+<!--parsings  model from route to <Rental> component as the @rental argument-->
+<!--<li><Rental @rental={{@model}}/></li>-->
+
+<!--If model from route is an array of Objects: -->
+<!--
+{{#each @model as |property|}}
+  <li>
+      <Rental @rental={{property}} />
+  </li>
+{{/each}}
+-->

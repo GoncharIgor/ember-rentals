@@ -1,0 +1,16 @@
+<!--a namespaced component. Namespacing allows us to organize our components by folders according to their purpose.-->
+<!--invoked as: <Rental::Image /> -->
+<button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
+    <img ...attributes>
+    {{#if this.isLarge}}
+        <small>View Smaller</small>
+    {{else}}
+        <small>View Larger</small>
+    {{/if}}
+</button>
+<!-- ...attributes keyword (sometimes referred to as the "splattributes" syntax)
+This allows arbitrary HTML attributes to be passed in when invoking this component -->
+
+
+<!-- Optionally, {{if}} can take a third argument for what the expression should evaluate into if the condition is false.-->
+<!-- <small>View {{if this.isLarge "Smaller" "Larger"}}</small>-->

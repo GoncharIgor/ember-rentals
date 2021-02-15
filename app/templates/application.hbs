@@ -1,7 +1,9 @@
-{{page-title "SuperRentals"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<!--This template is special in that it does not have its own URL and cannot be navigated to on its own.-->
+<!--It is used to specify a common layout that is shared by every page in your app-->
+<div class="container">
+    <NavBar />
+    <div class="body">
+        {{outlet}}
+    </div>
+</div>
+<!--The {{outlet}} keyword denotes the place where our site's pages should be rendered into, similar to the {{yield}} keyword -->
