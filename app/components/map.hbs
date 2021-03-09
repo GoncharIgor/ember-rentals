@@ -6,6 +6,9 @@
             width={{@width}} height={{@height}}
     >
 </div>
-
+<!--The ordering is important here!
+Passed-in alt attribute will override the 1-st declared default one
+On the other hand, it is important that we assign src, width, and height after ...attributes,
+so that they don't get accidentally overwritten by the invoker.-->
 
 <!--@lat - argument, NOT attribute-->

@@ -1,4 +1,5 @@
-<!--a namespaced component. Namespacing allows us to organize our components by folders according to their purpose.-->
+<!--a namespaced component, is the same as Child C.
+Namespacing allows us to organize our components by folders according to their purpose.-->
 <!--invoked as: <Rental::Image /> -->
 <button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
     <img ...attributes>
@@ -9,8 +10,9 @@
     {{/if}}
 </button>
 <!-- ...attributes keyword (sometimes referred to as the "splattributes" syntax)
-This allows arbitrary HTML attributes to be passed in when invoking this component -->
+This allows arbitrary HTML attributes to be passed in when invoking this component
+You can think of this as being similar to {{yield}}, but for HTML attributes specifically-->
 
 
 <!-- Optionally, {{if}} can take a third argument for what the expression should evaluate into if the condition is false.-->
-<!-- <small>View {{if this.isLarge "Smaller" "Larger"}}</small>-->
+<!-- <small>View {{if this.isLarge "Larger" "Smaller"}}</small>-->

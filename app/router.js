@@ -7,9 +7,10 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('about'); // adds a route named "about", which is served at the /about URL by default
+  this.route('about'); // adds a route named "about", which is served at the "/about" URL by default
   this.route('contact', {path: '/getting-in-touch'});
   // added the contact route, but explicitly specified a path for the route.
   // This allows us to keep the legacy URL, but use the new, shorter name for the route, as well as the TEMPLATE FILENAME
+  // here: 1) file = templates/contact.hbs 2) route = /getting-in-touch
   this.route('rental', { path: '/rentals/:rental_id' });
 });
